@@ -15,15 +15,16 @@ class JokeModel extends EventEmitter {
 
     getAll() {
         return this.JokesList
-
     }
     
-    
+    getRandomJoke() {
+        let randomNum = Math.floor((Math.random() * this.JokesList.length)); // Return a random number between 0 and JokesList length       
+        return this.JokesList[randomNum].joke; 
+    }
 
     addJoke(joke) {
-        console.log('inside addJoke method ' + joke);
-        
-        var id = this.JokesList[this.JokesList.length()].id + 1;
+ 
+        let id = this.JokesList.length+1;
         this.JokesList.push({
             id : id,
             joke: joke
@@ -36,8 +37,6 @@ class JokeModel extends EventEmitter {
 }
 
 const jokeModel = new JokeModel();
-window.jokeModel = jokeModel;
-
 
 
 export default jokeModel;

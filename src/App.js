@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Router , Route } from 'react-router-dom'; 
+import { Router , Route, Link } from 'react-router-dom'; 
 import logo from './logo.svg';
 import './App.css';
-import {jokes} from './components/jokes';
+
 
 class App extends Component {
   render() {
@@ -13,12 +13,6 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro"> Welcome to the Joke App</p>
-        <div>
-        <p>Links:</p>
-        
-       
-        
-      </div>
       </div>
     );
   }
